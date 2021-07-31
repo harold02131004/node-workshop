@@ -11,3 +11,10 @@ function sum(n){
 }
 
 console.log(sum(10)); 
+
+
+function sum1(n){
+    return ((n+1)*n)/2;
+}
+
+console.log(sum1(10)); 
