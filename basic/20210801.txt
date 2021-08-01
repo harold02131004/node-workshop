@@ -1,0 +1,20 @@
+race condition
+
+在多processor 多thread  並同時共用變數時容易遇到這種問題
+
+當變數沒有給清楚   同時搶到一個尚未回傳的變數  race condition 就會發生
+
+
+
+i/o
+存取硬碟  網路
+
+
+
+js是沒辦法控制輸出順序  因為他是單thread  好處就是不會阻塞
+
+但是php 因為是多thread
+
+每個processor  都有自己的一個stack
+
+php 銀行   nodeJS 麥當勞
