@@ -7,7 +7,7 @@ race condition
 
 
 i/o
-存取硬碟  網路
+存取硬碟  網路傳輸
 
 
 
@@ -18,3 +18,10 @@ js是沒辦法控制輸出順序  因為他是單thread  好處就是不會阻�
 每個processor  都有自己的一個stack
 
 php 銀行   nodeJS 麥當勞
+
+
+
+阻塞跟非阻塞問題  同步以及非同步去驗證  透過xhr.html去做  
+
+
+
