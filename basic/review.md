@@ -28,9 +28,9 @@ function getBreakfast() {
 a = 1, b = 2;
 a + b = 3;
 if(a === b){
- console.log("true")
+ console.log("true");
 }else{
- console.log("flase")
+ console.log("flase");
 }
 ```  
 
@@ -121,7 +121,9 @@ Test case
 每個禮拜五  
 
 ```
-## 補充  .md用法
+補充說明
+
+.md用法
 換行 : 文字段落後面加兩個空白
 ```  
 
