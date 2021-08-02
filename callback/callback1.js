@@ -1,4 +1,4 @@
-//這是一個  callback hell
+//這是一個  callback hell 程式
 
 let doWork = function (job, timer, cb) {
   // 模擬一個非同步工作
