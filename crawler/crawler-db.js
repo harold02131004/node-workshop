@@ -1,11 +1,17 @@
+// const axios = require("axios");
+// const moment = require("moment");
+// const fs = require("fs");
+
+
 const mysql = require("mysql");
+require("dotenv").config();
 
 const connection = mysql.createConnection({
-    host: "localhost",
-    user: "admin",
-    port: 3306,
-    password: "12345",
-    database: "stock",
+    host: process.env.host,
+    user:  process.env.user,
+    port:  process.env.port,
+    password: process.env.password,
+    database:  process.env.database,
   });
 
 
