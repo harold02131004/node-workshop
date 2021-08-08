@@ -2,33 +2,30 @@
 // const moment = require("moment");
 // const fs = require("fs");
 
-
 const mysql = require("mysql");
 require("dotenv").config();
 
 const connection = mysql.createConnection({
-    host: process.env.host,
-    user:  process.env.user,
-    port:  process.env.port,
-    password: process.env.password,
-    database:  process.env.database,
-  });
+  host: process.env.DB_HOST,
+  user: process.env.DB_USER,
+  port: process.env.DB_PORT,
+  password: process.env.DB_PASSWORD,
+  database: process.env.DB_NAME,
+});
 
+connection.connect((err) => {
+  if (err) {
+    console.error("資料庫連不上");
+  }
+});
 
-  connection.connect((err) => {
-    if (err) {
-      console.error("資料庫連不上");
-    }
-  });
-
-  // 不關閉連線，認為程式一直在執行
-  connection.end();
+// 不關閉連線，認為程式一直在執行
+connection.end();
 
 //   const fs = require("fs");
 //   const axios = require("axios");
 //   const moment = require("moment");
-  
-  
+
 //   async function dowork(){
 //       try {
 //         let readstockNo = await new Promise((resolve,reject)=>{
@@ -40,7 +37,7 @@ const connection = mysql.createConnection({
 //                   }
 //               })
 //           })
-         
+
 //               let result= await axios.get("https://www.twse.com.tw/exchangeReport/STOCK_DAY",{
 //                   params:{
 //                       response:"json",
@@ -52,6 +49,6 @@ const connection = mysql.createConnection({
 //           }
 //          catch{
 //              console.log(error);
-//          }                   
+//          }
 //   }
 //   dowork()
