@@ -11,6 +11,12 @@ app.use((req, res, next)=>{
 
 
 
+  app.use((req, res, next)=>{
+    
+    console.log(123);
+     next();
+   });
+
 
 //http Method :get post put
 
@@ -18,12 +24,6 @@ app.get("/",function (request , response, next){
     response.send("Hello");
 });
 
-
-app.use((req, res, next)=>{
-    
-    console.log(123);
-     next();
-   });
 
 app.get("/about",function (request , response, next){
     response.send("about us");
